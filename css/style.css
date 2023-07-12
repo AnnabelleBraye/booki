@@ -17,6 +17,7 @@
 body {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .main-container {
@@ -169,7 +170,40 @@ body {
   margin-bottom: 4px;
 }
 
-/* Footer */
+/****** Activities ******/
+.activities {
+  padding: 30px;
+  box-sizing: border-box;
+  /* width: 100%; */
+}
+
+.activities .section-title {
+  margin-bottom: 30px;
+}
+
+.activities-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.activities-cards .card {
+  padding: 0 0 20px 0;
+  width: 100%;
+}
+
+.activities-cards img {
+  height: 380px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.activities-cards .card-title {
+  margin: 20px 19px 0 19px;
+}
+
+/****** Footer ******/
 footer {
   background-color: var(--main-bg-color);
   display: flex;
