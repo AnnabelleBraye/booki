@@ -23,8 +23,44 @@ body {
 .main-container {
   width: 100%;
   max-width: 1440px;
-  padding: 0 50px;
   box-sizing: border-box;
+  /* padding: 0 50px; */
+}
+
+.layout-border {
+  padding: 0 50px;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.logo {
+  margin: 30px;
+  width: 61px;
+  height: 19px;
+}
+
+.anchor-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 68px;
+  align-self: flex-start;
+  width: 328px;
+  padding: 0 25px;
+}
+
+.anchor {
+  padding-top: 14px;
+  border-top: white 2px solid;
+}
+
+.selected-anchor {
+  border-top: var(--main-color) 2px solid;
+  color: var(--main-color) !important;
 }
 
 .section-title {
