@@ -7,7 +7,6 @@
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
-  --grey-color: #d9d9d9;
 }
 
 .fa-solid {
@@ -24,7 +23,6 @@ body {
   width: 100%;
   max-width: 1440px;
   box-sizing: border-box;
-  /* padding: 0 50px; */
 }
 
 .layout-border {
@@ -116,6 +114,122 @@ body {
 
 .show-more {
   margin: 0;
+}
+
+/****** Infos group ******/
+.info-group-container {
+}
+
+.info-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.searchbar-container {
+  display: flex;
+  width: 377px;
+  height: 49px;
+  max-height: 49px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 49px;
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-bg-color);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.search-input-container {
+  display: flex;
+  border: 1px solid var(--main-bg-color);
+  /* padding: 0 24px; mieux margin ou padding ?*/
+}
+
+.search-input {
+  width: 147px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 24px;
+  padding: 0;
+  border: none;
+  border-radius: 0px;
+}
+
+input {
+  outline: none;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: var(--main-color);
+  height: 100%;
+  border: 1px solid var(--main-color);
+  padding: 15px 16px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/****** Filters ******/
+.filters-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+  padding: 4px 19px;
+  border: 2px solid #d9d9d9;
+  border-radius: 25px;
+}
+
+.filter:hover {
+  background-color: #deebff;
+}
+
+.filter-icon-container {
+  display: flex;
+  align-self: center;
+}
+
+.filter-icon {
+  font-size: 22px;
+}
+
+.filter-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/****** Infobar ******/
+.infobar-container {
+  display: flex;
+  gap: 10px;
+}
+
+.infobar-icon-container {
+  display: flex;
+  border: 1px solid var(--main-bg-color);
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.info-text {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /****** Hebergements And Populaires ***********/
