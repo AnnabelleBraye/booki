@@ -118,6 +118,7 @@ body {
 
 .anchor {
   border-top: var(--white-color) 2px solid;
+  padding-top: 14px;
 }
 
 .anchor:hover,
