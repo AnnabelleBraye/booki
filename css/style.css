@@ -508,10 +508,12 @@ footer li {
     gap: 0;
     align-self: center;
     box-sizing: border-box;
+    padding: 0;
   }
 
   .anchor {
     padding-bottom: 14px;
+    padding-top: 0;
   }
 
   .anchor:hover,
