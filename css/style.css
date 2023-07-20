@@ -12,29 +12,16 @@
   --tint2-bg-color: #d9d9d9;
 
   --card-title-size: 16px;
-  /* --card-title-weight: 700; */
   --card-subtitle-size: 14px;
   --card-subtitle-weight: 400;
 
   --section-title-size: 22px;
-  /* --section-title-weight: 700; */
-
-  /* --information-size: 16px;
-  --information-weight: 400;
-
-  --header-nav-link-size: 16px;
-  --header-nav-link-weight: 400; */
 
   --filter-text-size: 17px;
-  /* --filter-text-weight: 700; */
 
   --search-text-size: 18px;
-  /* --search-text-weight: 700; */
 
   --footer-title-size: 18px;
-  /* --footer-title-weight: 700;
-  --footer-link-size: 16px;
-  --footer-link-weight: 400; */
 }
 
 .bold {
@@ -43,12 +30,10 @@
 
 h2 {
   font-size: var(--section-title-size);
-  /* font-weight: var(--section-title-weight); */
 }
 
 .card-title {
   font-size: var(--card-title-size);
-  /* font-weight: var(--card-title-weight); */
 }
 
 .card-subtitle {
@@ -58,33 +43,39 @@ h2 {
 
 .footer-title {
   font-size: var(--footer-title-size);
-  /* font-weight: var(--footer-title-weight); */
 }
 
 .filter-text {
   font-size: var(--filter-text-size);
-  /* font-weight: var(--filter-text-weight); */
 }
 
 .searchbar-text {
   font-size: var(--search-text-size);
-  /* font-weight: var(--search-text-weight); */
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .fa-solid {
   color: var(--main-color);
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
 .main-container {
   width: 100%;
   max-width: 1440px;
   box-sizing: border-box;
+  margin: 0;
 }
 
 .layout-margin {
@@ -92,7 +83,6 @@ body {
 }
 
 .banner-container {
-  display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
 }
@@ -107,7 +97,6 @@ body {
 }
 
 .anchor-container {
-  display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   gap: 68px;
@@ -132,6 +121,8 @@ body {
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  box-sizing: border-box;
+  height: 100%;
 }
 
 .card img {
@@ -159,15 +150,16 @@ body {
   margin: 0;
 }
 
+.p-0 {
+  padding: 0;
+}
+
 /****** Infos group ******/
 .search-and-filter-container {
-  display: flex;
-  flex-direction: column;
   gap: 35px;
 }
 
 .searchbar-container {
-  display: flex;
   width: 377px;
   height: 49px;
   max-height: 49px;
@@ -178,7 +170,6 @@ body {
 }
 
 .icon-container {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 49px;
@@ -190,10 +181,6 @@ body {
   border-bottom-left-radius: 15px;
 }
 
-.search-input-container {
-  display: flex;
-}
-
 .search-input {
   width: 147px;
   margin: 0 24px;
@@ -203,7 +190,6 @@ body {
 }
 
 .submit-button {
-  display: flex;
   align-items: center;
   color: var(--white-color);
   background-color: var(--main-color);
@@ -233,18 +219,16 @@ input {
 
 /****** Filters ******/
 .filters-container {
-  display: flex;
   align-items: center;
   gap: 15px;
 }
 
 .filters {
-  display: flex;
   gap: 15px;
 }
 
 .filter {
-  display: flex;
+  align-items: center;
   gap: 10px;
   padding: 4px 19px;
   border: 2px solid var(--tint2-bg-color);
@@ -256,7 +240,6 @@ input {
 }
 
 .filter-icon-container {
-  display: flex;
   align-self: center;
 }
 
@@ -270,21 +253,11 @@ input {
 
 /****** Infobar ******/
 .infobar-container {
-  display: flex;
   gap: 10px;
-}
-
-.infobar-icon-container {
-  display: flex;
-  border: 1px solid var(--main-bg-color);
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
 }
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
-  display: flex;
   justify-content: space-between;
   gap: 30px;
 }
@@ -299,8 +272,6 @@ input {
 /****** Hebergements ***********/
 .hebergements {
   width: 65%;
-  display: flex;
-  flex-direction: column;
   gap: 30px;
 }
 
@@ -312,7 +283,10 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-  margin-bottom: 30px;
+}
+
+.hebergements-cards .card {
+  padding-bottom: 15px;
 }
 
 .hebergements-cards img {
@@ -324,7 +298,7 @@ input {
 
 .hebergements-cards .card-content {
   width: 100%;
-  padding-left: 15px;
+  padding: 0 15px;
   box-sizing: border-box;
 }
 
@@ -339,26 +313,20 @@ input {
 
 /****** Populaires ***********/
 .populaires {
-  display: flex;
-  flex-direction: column;
   gap: 30px;
   width: 32%;
 }
 
 .populaires-cards {
-  display: flex;
-  flex-direction: column;
   gap: 33px;
 }
 
 .populaires-title {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .populaires-cards .card {
-  display: flex;
   height: 146px;
 }
 
@@ -372,8 +340,6 @@ input {
 .populaires-cards .card-content {
   width: 67%;
   padding: 10px 5px 5px 15px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
 }
@@ -386,8 +352,6 @@ input {
 .activities {
   padding: 30px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   gap: 30px;
 }
 
@@ -416,7 +380,6 @@ input {
 }
 
 .activities-title-container {
-  display: flex;
   align-items: center;
   padding: 20px 19px;
 }
@@ -432,17 +395,19 @@ footer {
 }
 
 footer .title-padding {
-  padding-bottom: 8px;
+  padding-bottom: 15px;
 }
 
 footer ul {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+  gap: 15px;
 }
 
 footer li {
   list-style-type: none;
-  padding-bottom: 8px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -455,7 +420,6 @@ footer li {
   }
 
   .filters-container {
-    display: flex;
     flex-direction: column;
     align-items: baseline;
     gap: 20px;
@@ -480,8 +444,6 @@ footer li {
 
   .populaires-cards {
     display: grid;
-    flex-direction: row;
-    justify-content: space-between;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
@@ -516,17 +478,12 @@ footer li {
     width: 100%;
   }
 
-  .overflow-hidden {
-    overflow: hidden;
-  }
-
   .section-margin {
     overflow: hidden;
     margin-bottom: 0;
   }
 
   .banner-container {
-    display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 100%;
@@ -669,7 +626,6 @@ footer li {
   }
 
   .populaires-cards .card {
-    display: flex;
     width: 100%;
     margin-top: 11px;
   }
@@ -677,9 +633,6 @@ footer li {
   .populaires-cards .card-content {
     width: 67%;
     padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
   }
 
@@ -711,15 +664,5 @@ footer li {
     max-width: 100%;
     gap: 50px;
     box-sizing: border-box;
-  }
-
-  footer .title-padding {
-    padding-bottom: 15px;
-  }
-
-  footer ul {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
   }
 }
