@@ -67,6 +67,18 @@ h2 {
   flex-direction: row;
 }
 
+.section-margin {
+  margin-bottom: 35px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
 .fa-solid {
   color: var(--main-color);
 }
@@ -140,18 +152,6 @@ h2 {
 .link {
   text-decoration: none;
   color: var(--black-color);
-}
-
-.section-margin {
-  margin-bottom: 35px;
-}
-
-.m-0 {
-  margin: 0;
-}
-
-.p-0 {
-  padding: 0;
 }
 
 /****** Infos group ******/
